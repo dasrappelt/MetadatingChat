@@ -28,6 +28,9 @@ $primary-color: white;
   display: none;
 }
 
+
+
+
 html, body{
   margin:0;
   font-family: $font-stack;
@@ -41,7 +44,7 @@ html, body{
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 300px 1fr;
   grid-template-rows: 30% 1fr;
 }
 
@@ -54,7 +57,6 @@ nav{
   grid-template-rows: 30% 1fr;
 
   background-color: #4753E2;
-  border-radius: 13px 13px 0px 0px;
 
 
   .header {
@@ -81,8 +83,11 @@ nav{
     grid-row: 2 / 3;
     background-color: white;
   border-radius: 13px 13px 0px 0px;
-    margin: 0% 5% 0% 5%;
+    margin: 10% 10% 0% 10%;
     padding: 0;
+
+    overflow: auto;
+  white-space: nowrap;
 
     display: grid;
     grid-template-rows: repeat(auto-fill);
@@ -95,14 +100,50 @@ nav{
       
 
     }
+
+    
+
     .menu-img--bots {
+      height: 200px;
       background-size: cover;                 /* <------ */
       background-repeat:   no-repeat;
-      background-position: center center;  
+      background-position: center center;
+      opacity: 1;
       cursor: pointer;
+
+      .hidden-name {
+        visibility: hidden;
+      }
       
 
     }
+
+    .menu-img--bots:hover {
+      height: 200px;
+      background-size: cover;                 /* <------ */
+      background-repeat:   no-repeat;
+      background-position: center center;
+      opacity: 0.5;
+      cursor: pointer;
+      
+      p {
+        position: relative;
+        float: left;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        color: #4753E2;
+ 
+        visibility: visible;
+        font-size: 5fr;
+        font-weight: bolder;
+  
+      }
+      
+
+    }
+  
     .menu-div--add {
       background-color: #4753E2;
       font-size: 5em;
@@ -133,7 +174,7 @@ main{
     padding: 6%;
 
     .main-form--box {
-      width: 100%;
+      width: 80%;
       height: 100%;
       background-color: #4753E2;
       border-radius: 13px;
